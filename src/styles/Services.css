@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/boowie');
+
+.services-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.service-icon{
+    height: 70px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.service-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 340px;
+    position: relative;
+    padding: 30px;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Lightning border effect */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(134, 215, 247, 0.8) 50%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    border-radius: 8px;
+}
+
+/* Smooth glowing border */
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        rgba(134, 215, 247, 0.8), 
+        rgba(134, 215, 247, 0.4), 
+        rgba(134, 215, 247, 0.8), 
+        rgba(134, 215, 247, 0.4)
+    );
+    background-size: 200% 200%;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: -1;
+    border-radius: 10px;
+    filter: blur(1px);
+}
+
+/* Hover effects */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(134, 215, 247, 0.5);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+    animation: lightning-pulse 0.6s ease-in-out;
+}
+
+.service-card:hover::after {
+    opacity: 1;
+    background-position: 100% 100%;
+    animation: border-flow 2s ease-in-out infinite alternate;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(134, 215, 247, 0.8));
+}
+
+/* Lightning animation */
+@keyframes lightning-pulse {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Smooth border flow animation */
+@keyframes border-flow {
+    0% {
+        background-position: 0% 0%;
+        filter: blur(1px);
+    }
+    100% {
+        background-position: 100% 100%;
+        filter: blur(0px);
+    }
+}
+
+.service-card h3{
+    font-family: "BOOWIE", sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+
+
+.service-card p{
+    font-family: "montserrat", sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 300;
+    max-width: 350px;
+    text-align: center;
+    margin-top: 10px;
+    height: 90px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.service-card:hover p {
+    color: #f0f8ff;
+    text-shadow: 0 0 5px rgba(134, 215, 247, 0.3);
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    .services-body {
+        flex-direction: column;
+        gap: 50px;
+        padding: 20px 20px;
+        text-align: center;
+    }
+    
+    .service-icon {
+        height: 60px;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+        margin-top: 25px;
+    }
+    
+    .service-card p {
+        font-size: 0.95rem;
+        max-width: 280px;
+    }
+    
+    .service-card::after {
+        border-radius: 8px;
+    }
+  
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+.services-body {
+    gap: 30px;
+    padding: 0 20px;
+}
+.service-card {
+    height: 370px;
+    padding: 25px;
+    text-align: center;
+}
+.service-icon {
+    height: 65px;
+}
+.service-card h3 {
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+.service-card p {
+    font-size: 0.9rem;
+    max-width: 320px;
+    height: 85px;
+}
+}

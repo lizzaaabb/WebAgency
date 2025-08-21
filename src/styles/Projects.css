@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/boowie');
+
+/* Progress line indicator - only visible within the Projects component */
+.projects-slideshow-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.projects-slideshow-wrapper .projects-progress-line-container {
+  position: absolute;
+  right: 30px;
+  top: 20%;
+  height: 60%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
+  z-index: 1000;
+}
+
+.projects-progress-line {
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff, rgba(134, 215, 247, 1));
+  border-radius: 1px;
+  box-shadow:
+    0 0 8px rgba(134, 215, 247, 0.8),
+    0 0 12px rgba(134, 215, 247, 0.6),
+    0 0 16px rgba(134, 215, 247, 0.4);
+  transition: all 0.1s ease-out;
+  animation: lightsaber-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes lightsaber-glow {
+  0% {
+    box-shadow:
+      0 0 8px rgba(134, 215, 247, 0.8),
+      0 0 12px rgba(134, 215, 247, 0.6),
+      0 0 16px rgba(134, 215, 247, 0.4);
+  }
+  100% {
+    box-shadow:
+      0 0 12px rgba(134, 215, 247, 1),
+      0 0 18px rgba(134, 215, 247, 0.8),
+      0 0 24px rgba(134, 215, 247, 0.6);
+  }
+}
+
+/* Simple Projects CSS */
+.projects-scroll-container {
+  position: relative;
+}
+
+.projects-sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; /* Crucial for hiding images that are out of view */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Individual Project Item Container */
+.projects-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 900px; /* Adjust max width for your images */
+  height: auto; /* Let the image define its height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box; /* Include padding in width and height calculation */
+  transition: opacity 0.8s ease-in-out; /* Smooth opacity transition */
+}
+
+/* Image container */
+.projects-image-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* To ensure images don't overflow their container if scaled */
+}
+
+.projects-image {
+  width: 100%;
+  height: 100%; /* Make sure image fills the container */
+  object-fit: cover; /* Or 'contain' if you want the whole image visible without cropping */
+  display: block; /* Removes bottom space under the image */
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .projects-slideshow-wrapper .projects-progress-line-container {
+    right: 20px;
+    top: 25%;
+    height: 50%;
+  }
+
+  .projects-item {
+    max-width: 90%;
+    padding: 32px 20px;
+  }
+
+  .projects-image-container {
+    border-radius: 8px;
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  .projects-slideshow-wrapper .projects-progress-line-container {
+    right: 15px;
+    top: 30%;
+    height: 40%;
+    width: 1.5px;
+  }
+
+  .projects-item {
+    padding: 24px 10px; /* Tighter padding for mobile */
+    max-width: 100%; /* Use full width on mobile */
+  }
+
+  .projects-image-container {
+    border-radius: 6px;
+  }
+}
+
+/* Adjustments for smaller viewports if needed, similar to Card3's media queries */
+/* For example: */
+@media (max-width: 360px) {
+  .projects-slideshow-wrapper .projects-progress-line-container {
+    right: 10px;
+    top: 35%;
+    height: 30%;
+    width: 1px;
+  }
+  .projects-item {
+    padding: 16px 8px;
+  }
+  .projects-image-container {
+    border-radius: 4px;
+  }
+}

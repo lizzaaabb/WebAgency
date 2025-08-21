@@ -1,0 +1,39 @@
+.card-header1 {
+  padding: 30px;
+  margin-left: 90px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: opacity 0.3s ease-out, position 0.3s ease;
+}
+
+/* When not sticky, use normal document flow */
+.card-header1-not-sticky {
+  position: relative !important;
+  /* Remove the sticky positioning to allow normal scroll flow */
+}
+
+.card-header1 h2 {
+  font-family: "BOOWIE", sans-serif;
+  font-size: 3.6em;
+  color: #fff;
+  font-weight: 300;
+  transition: opacity 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+  .card-header1 h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  
+  .card-header1 {
+    justify-content: center;
+    margin-left: 0px;
+  }
+}

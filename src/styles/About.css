@@ -1,0 +1,956 @@
+@import url('https://fonts.cdnfonts.com/css/boowie');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Styles */
+.about-body {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Home Button */
+.home-button-container {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 1000;
+}
+
+.home-button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(134, 215, 247, 0.9) 0%, rgba(182, 227, 255, 0.8) 50%, rgba(145, 219, 248, 0.9) 100%);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(25px);
+  box-shadow: 
+    0 8px 25px rgba(134, 215, 247, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.home-button:hover {
+  background: linear-gradient(135deg, rgba(134, 215, 247, 1) 0%, rgba(182, 227, 255, 0.95) 50%, rgba(145, 219, 248, 1) 100%);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 15px 40px rgba(134, 215, 247, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Main Container */
+.about-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/* Header Section */
+.about-header {
+  text-align: center;
+  padding: 120px 0 80px;
+  position: relative;
+}
+
+.about-header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-title-main {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 
+    0 0 30px rgba(255, 255, 255, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.about-subtitle-secondary {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  margin: -10px 0 40px;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+.about-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Section Styles */
+.about-section {
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.section-title {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  color: #ffffff;
+  margin: 0 0 30px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(134, 215, 247, 1), transparent);
+  box-shadow: 0 0 8px rgba(134, 215, 247, 0.6);
+}
+
+.section-subtitle {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin: 0 0 50px;
+  line-height: 1.2;
+}
+
+/* Introduction Section */
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding: 80px 0;
+}
+
+.intro-text-container {
+  flex: 1;
+  min-width: 400px;
+}
+
+.intro-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ffffff;
+  max-width: 800px;
+  margin-top: 40px;
+  opacity: 0.95;
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  opacity: 0.7;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+  transform: translateY(-8px);
+}
+
+.scroll-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.scroll-arrow {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, #ffffff, rgba(134, 215, 247, 1));
+  border-radius: 1px;
+  box-shadow:
+    0 0 8px rgba(134, 215, 247, 0.8),
+    0 0 12px rgba(134, 215, 247, 0.6),
+    0 0 16px rgba(134, 215, 247, 0.4);
+  animation: lightsaber-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes lightsaber-glow {
+  0% {
+    box-shadow:
+      0 0 8px rgba(134, 215, 247, 0.8),
+      0 0 12px rgba(134, 215, 247, 0.6),
+      0 0 16px rgba(134, 215, 247, 0.4);
+  }
+  100% {
+    box-shadow:
+      0 0 12px rgba(134, 215, 247, 1),
+      0 0 18px rgba(134, 215, 247, 0.8),
+      0 0 24px rgba(134, 215, 247, 0.6);
+  }
+}
+
+/* Philosophy Section */
+.philosophy-content {
+  text-align: left;
+  max-width: 1000px;
+}
+
+.philosophy-container {
+  margin-top: 100px;
+}
+
+.philosophy-card {
+  padding: 0;
+  border: none;
+  background: none;
+  backdrop-filter: none;
+  transition: none;
+  overflow: visible;
+}
+
+.philosophy-card::before {
+  display: none;
+}
+
+.philosophy-card:hover {
+  border: none;
+  transform: none;
+  box-shadow: none;
+}
+
+.philosophy-heading {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  margin: 0 0 40px;
+  position: relative;
+}
+
+.philosophy-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+  opacity: 0.95;
+}
+
+/* Expertise Section */
+.expertise-section {
+  text-align: left;
+}
+
+.expertise-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 100px;
+  max-width: 900px;
+}
+
+.expertise-card {
+  text-align: left;
+  padding: 50px 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  cursor: pointer;
+}
+
+.expertise-card:last-child {
+  border-bottom: none;
+}
+
+.expertise-card::before {
+  content: '';
+  position: absolute;
+  left: -60px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(134, 215, 247, 0.6), transparent);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.expertise-card:hover::before {
+  opacity: 1;
+}
+
+.expertise-card:hover {
+  transform: translateX(20px);
+  border-bottom-color: rgba(134, 215, 247, 0.2);
+}
+
+.expertise-title {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  margin: 0 0 20px;
+  transition: all 0.3s ease;
+}
+
+.expertise-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+  max-width: 700px;
+}
+
+.expertise-card:hover .expertise-description {
+  opacity: 1;
+}
+
+/* Approach Section */
+.approach-section {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.approach-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 120px;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.approach-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.approach-item {
+  position: relative;
+  padding-left: 40px;
+}
+
+.approach-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 2px;
+  height: 55px;
+  background: linear-gradient(to bottom, #ffffff, rgba(134, 215, 247, 1));
+  border-radius: 1px;
+  box-shadow:
+    0 0 8px rgba(134, 215, 247, 0.8),
+    0 0 12px rgba(134, 215, 247, 0.6),
+    0 0 16px rgba(134, 215, 247, 0.4);
+  opacity: 0.8;
+}
+
+.approach-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.approach-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual-element {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(134, 215, 247, 0.03) 50%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  overflow: hidden;
+}
+
+.visual-element::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: conic-gradient(from 0deg, transparent, rgba(134, 215, 247, 0.3), transparent, rgba(182, 227, 255, 0.2), transparent);
+  border-radius: 50%;
+  animation: elegant-rotate 8s linear infinite;
+  z-index: -1;
+}
+
+.visual-element::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(134, 215, 247, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+@keyframes elegant-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { 
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0.2;
+  }
+}
+
+/* Call to Action Section */
+.cta-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cta-content {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.cta-heading {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  margin: 0 0 30px;
+  line-height: 1.3;
+}
+
+.cta-subheading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0 0 80px;
+  line-height: 1.6;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.cta-button {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(134, 215, 247, 0.9) 0%, rgba(182, 227, 255, 0.8) 50%, rgba(145, 219, 248, 0.9) 100%);
+  border: none;
+  padding: 24px 60px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  backdrop-filter: blur(30px);
+  box-shadow: 
+    0 15px 40px rgba(134, 215, 247, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 25px 60px rgba(134, 215, 247, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(134, 215, 247, 1) 0%, rgba(182, 227, 255, 0.95) 50%, rgba(145, 219, 248, 1) 100%);
+}
+
+.cta-text {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-arrow {
+  position: relative;
+  z-index: 2;
+  width: 20px;
+  height: 1px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.cta-arrow::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(5px);
+}
+
+
+
+/* =============================================
+   MOBILE LANDSCAPE & SMALL TABLET (481px - 767px)
+   ============================================= */
+
+@media screen and (max-width: 767px) {
+  .home-button-container {
+    top: 20px;
+    left: 20px;
+  }
+
+  .home-button {
+    font-size: 0.85rem;
+    padding: 12px 24px;
+  }
+
+  .about-page-container {
+    padding: 0 30px;
+  }
+
+  .about-header {
+    padding: 100px 0 60px;
+  }
+
+  .about-subtitle-secondary {
+    letter-spacing: 0.2em;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+    align-items: center;
+  }
+
+  .intro-text-container {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .intro-description {
+    font-size: 1.1rem;
+    margin-top: 30px;
+  }
+
+  .scroll-indicator {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .approach-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: left;
+  }
+
+  .approach-text {
+    order: 1;
+  }
+
+  .approach-text {
+    gap: 35px;
+  }
+
+  .approach-visual {
+    display: none;
+  }
+
+  .approach-item {
+    padding-left: 30px;
+  }
+
+  .approach-item::before {
+    height: 45px;
+  }
+
+  .approach-description {
+    font-size: 1.2rem;
+  }
+
+  .expertise-grid {
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .expertise-card {
+    padding: 30px 0;
+  }
+
+  .expertise-card::before {
+    left: -30px;
+  }
+
+  .expertise-card:hover {
+    transform: translateX(15px);
+  }
+
+  .philosophy-container {
+    margin-top: 60px;
+  }
+
+  .philosophy-text {
+    font-size: 1.2rem;
+  }
+
+  .about-section {
+    margin-bottom: 80px;
+  }
+
+  .section-title {
+    letter-spacing: 0.3em;
+  }
+
+  .cta-button {
+    padding: 20px 50px;
+    font-size: 1rem;
+    gap: 15px;
+  }
+}
+
+/* =============================================
+   MOBILE PORTRAIT (320px - 480px)
+   ============================================= */
+
+@media screen and (max-width: 480px) {
+  .home-button-container {
+    top: 15px;
+    left: 15px;
+  }
+
+  .home-button {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    letter-spacing: 0.06em;
+  }
+
+  .about-page-container {
+    padding: 0 20px;
+  }
+
+  .about-header {
+    padding: 80px 0 50px;
+  }
+
+  .about-title-main {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+    letter-spacing: 0.1em;
+  }
+
+  .about-subtitle-secondary {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    letter-spacing: 0.15em;
+    margin: -5px 0 30px;
+  }
+
+  .about-tagline {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+  }
+
+  .intro-section {
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .intro-description {
+    font-size: 1rem;
+    margin-top: 25px;
+  }
+
+  .scroll-indicator {
+    gap: 15px;
+  }
+
+  .scroll-text {
+    font-size: 0.75rem;
+  }
+
+  .scroll-arrow {
+    height: 30px;
+  }
+
+  .section-title {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    letter-spacing: 0.25em;
+    margin: 0 0 25px;
+  }
+
+  .section-title::after {
+    bottom: -10px;
+    width: 30px;
+  }
+
+  .section-subtitle {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin: 0 0 40px;
+  }
+
+  .philosophy-heading {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    margin: 0 0 30px;
+  }
+
+  .philosophy-text {
+    font-size: 1.1rem;
+  }
+
+  .philosophy-container {
+    margin-top: 50px;
+  }
+
+  .expertise-grid {
+    gap: 35px;
+    margin-top: 50px;
+    max-width: 100%;
+  }
+
+  .expertise-card {
+    padding: 25px 0;
+  }
+
+  .expertise-card::before {
+    left: -20px;
+    width: 1px;
+  }
+
+  .expertise-card:hover {
+    transform: translateX(10px);
+  }
+
+  .expertise-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin: 0 0 15px;
+  }
+
+  .expertise-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .approach-content {
+    gap: 50px;
+  }
+
+  .approach-visual {
+    display: none;
+  }
+
+  .approach-item {
+    padding-left: 25px;
+  }
+
+  .approach-item::before {
+    height: 35px;
+    width: 1px;
+  }
+
+  .approach-description {
+    font-size: 1.1rem;
+  }
+
+  .about-section {
+    margin-bottom: 60px;
+  }
+
+  .cta-section {
+    margin-bottom: 40px;
+  }
+
+  .cta-content {
+    width: 100%;
+  }
+
+  .cta-heading {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    margin: 0 0 25px;
+  }
+
+  .cta-subheading {
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    margin: 0 0 60px;
+  }
+
+  .cta-button {
+    padding: 18px 40px;
+    font-size: 0.95rem;
+    gap: 12px;
+    border-radius: 40px;
+  }
+
+  .cta-arrow {
+    width: 16px;
+  }
+
+  .cta-arrow::after {
+    right: -6px;
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* =============================================
+   EXTRA SMALL MOBILE (max-width: 320px)
+   ============================================= */
+
+@media screen and (max-width: 320px) {
+  .about-page-container {
+    padding: 0 15px;
+  }
+
+  .home-button {
+    font-size: 0.75rem;
+    padding: 8px 16px;
+  }
+
+  .about-title-main {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .intro-description,
+  .philosophy-text,
+  .approach-description,
+  .expertise-description {
+    font-size: 0.95rem;
+  }
+
+  .visual-element {
+    display: none;
+  }
+
+  .cta-button {
+    padding: 16px 35px;
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .expertise-card::before {
+    left: -15px;
+  }
+
+  .approach-item {
+    padding-left: 20px;
+  }
+
+  .approach-item::before {
+    height: 30px;
+  }
+}
+
+/* =============================================
+   HOVER EFFECTS ADJUSTMENTS FOR TOUCH DEVICES
+   ============================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .home-button:hover {
+    transform: none;
+    box-shadow: 
+      0 8px 25px rgba(134, 215, 247, 0.25),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(134, 215, 247, 0.9) 0%, rgba(182, 227, 255, 0.8) 50%, rgba(145, 219, 248, 0.9) 100%);
+  }
+
+  .expertise-card:hover {
+    transform: none;
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .expertise-card:hover::before {
+    opacity: 0;
+  }
+
+  .expertise-card:hover .expertise-description {
+    opacity: 0.85;
+  }
+
+  .scroll-indicator:hover {
+    opacity: 0.7;
+    transform: none;
+  }
+
+  .cta-button:hover {
+    transform: none;
+    box-shadow: 
+      0 15px 40px rgba(134, 215, 247, 0.25),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(134, 215, 247, 0.9) 0%, rgba(182, 227, 255, 0.8) 50%, rgba(145, 219, 248, 0.9) 100%);
+  }
+
+  .cta-button:hover .cta-arrow {
+    transform: none;
+  }
+
+  .cta-button:hover::before {
+    left: -100%;
+  }
+}

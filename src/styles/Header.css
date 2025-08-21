@@ -1,0 +1,471 @@
+@import url('https://fonts.cdnfonts.com/css/boowie');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/06876be31ffe4c0ca832e67353fa5c62?family=LILIMING+W00+Regular');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+html{
+    overflow-x: hidden;
+}
+#root{
+    background-color: #101010;
+}
+
+.header-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+    letter-spacing: 1.4px;
+    font-weight: 500;
+    margin-top: 22px;
+}
+
+* {
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.first-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.first-block a {
+    font-family: "montserrat", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-top: -3px;
+    margin-left: 5px;
+}
+
+.third-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.third-block a {
+    font-family: "montserrat", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-top: -3px;
+    margin-right: 5px;
+}
+
+.header-container a {
+    text-decoration: none;
+}
+
+.hero-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 100px;
+    flex-direction: row;
+}
+
+.first-title-container {
+    margin: 0;
+    padding: 0;
+}
+
+.first-title-container2 {
+    margin: 0;
+    padding: 0;
+}
+
+.second-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.title1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 4.8rem;
+    letter-spacing: 1.1px;
+    font-weight: 450;
+    margin: 0;
+    padding: 0;
+    margin-left: 55px;
+    cursor: pointer;
+}
+
+.title2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 4.8rem;
+    letter-spacing: 1.1px;
+    font-weight: 450;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.title3 {
+    font-family: 'BOOWIE', sans-serif;
+    font-size: 6rem;
+    letter-spacing: 1.1px;
+    font-weight: 450;
+    margin: 0;
+    padding: 0;
+    margin-left: 105px;
+    cursor: pointer;
+}
+
+.second-title-container2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -30px;
+}
+
+.second-title-container2 :nth-of-type(1) {
+    align-self: flex-end;
+}
+
+.second-title-container2 span {
+    font-family: "montserrat", sans-serif;
+    opacity: 0.7;
+    font-size: 10px;
+}
+
+.block1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -230px;
+}
+
+.block1 span {
+    font-family: "montserrat", sans-serif;
+    margin-left: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.block3 {
+    margin-top: -230px;
+}
+
+.arrow {
+    height: 50px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.scroll-container {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle {
+    position: relative;
+    width: 179px;
+    height: 179px;
+    border: 0.4px solid gray;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    animation: rotateText 7s linear infinite;
+    transform-origin: center;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.logo-circle {
+    animation: reverseRotateText 7s linear infinite;
+    transform-origin: center;
+}
+
+.circle:hover {
+    animation-play-state: paused;
+}
+
+.circle:hover .logo-circle {
+    animation-play-state: paused;
+}
+
+.logo {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 7%;
+}
+
+.text span {
+    position: absolute;
+    font-size: 15px;
+    transform-origin: 50% 90px;
+    transform: translateX(-50%);
+    font-family: "Roboto Mono", monospace;
+    opacity: 0.8;
+}
+
+.text span:nth-child(1) {
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.text span:nth-child(2) {
+    transform: rotate(15deg) translateX(-50%);
+}
+
+.text span:nth-child(3) {
+    transform: rotate(30deg) translateX(-50%);
+}
+
+.logo-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.4px solid gray;
+    border-radius: 50%;
+    height: 8.2em;
+    width: 8.2em;
+}
+
+.logo{
+    opacity: 0.8;
+}
+
+.circle {
+    transition: box-shadow 0.3s ease;
+}
+
+.circle:hover {
+    box-shadow: 0 0 4px rgba(134, 215, 247, 0.7), 0 0 6px rgba(134, 215, 247, 0.5);
+}
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes reverseRotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-container {
+        overflow-x: hidden;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+
+    .title1 {
+        font-size: 3.7rem;
+    }
+
+    .title2 {
+        font-size: 3.7rem;
+    }
+
+    .title3 {
+        font-size: 4rem;
+    }
+
+    .hero-body {
+        margin-top: 200px;
+    }
+
+    .arrow {
+        height: 35px;
+        margin-right: 15px;
+    }
+
+    .scroll-container {
+        margin-top: 120px;
+    }
+
+    .second-title-container2 {
+        display: none;
+    }
+
+    .body {
+        height: 1250px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .header-container {
+        overflow-x: hidden;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .first-block a {
+        display: none;
+    }
+
+    .third-block a {
+        display: none;
+    }
+
+    .header-title {
+        font-size: 12px;
+    }
+
+    .title1 {
+        font-size: 2.2rem;
+    }
+
+    .title2 {
+        font-size: 2.2rem;
+    }
+
+    .title3 {
+        font-size: 2.7rem;
+        margin-top: 5px;
+    }
+
+    .second-title-container2 {
+        display: none;
+    }
+
+    .block2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .first-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .second-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .second-title-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title1{
+        margin-left: 0;
+    }
+
+    .title3{
+        margin-left: 0;
+    }
+
+    .body {
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .scroll-container {
+        width: 100%;
+    }
+
+    .circle {
+        width: 177px;
+    }
+
+    .hero-body {
+        margin-top: 135px;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    .block1 {
+        display: none;
+    }
+
+    .block3 {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 667px) {
+    .circle {
+        width: 130px;
+        height: 130px;
+        padding: 3px;
+    }
+
+    .logo-circle {
+        height: 5.9em;
+        width: 5.9em;
+    }
+
+    .text span {
+        transform-origin: 50% 65px;
+        font-size: 10.8px;
+    }
+
+    .logo {
+        height: 24px;
+        width: 24px;
+    }
+
+    .scroll-container {
+        margin-top: 130px;
+    }
+}

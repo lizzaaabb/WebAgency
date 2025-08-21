@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/boowie');
+
+/* Progress line indicator - only visible within the Card3 component */
+.card3-slideshow-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.card3-slideshow-wrapper .progress-line-container {
+  position: absolute;
+  right: 30px;
+  top: 20%;
+  height: 60%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
+  z-index: 1000;
+}
+
+.progress-line {
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff, rgba(134, 215, 247, 1));
+  border-radius: 1px;
+  box-shadow: 
+    0 0 8px rgba(134, 215, 247, 0.8),
+    0 0 12px rgba(134, 215, 247, 0.6),
+    0 0 16px rgba(134, 215, 247, 0.4);
+  transition: all 0.1s ease-out;
+  animation: lightsaber-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes lightsaber-glow {
+  0% {
+    box-shadow: 
+      0 0 8px rgba(134, 215, 247, 0.8),
+      0 0 12px rgba(134, 215, 247, 0.6),
+      0 0 16px rgba(134, 215, 247, 0.4);
+  }
+  100% {
+    box-shadow: 
+      0 0 12px rgba(134, 215, 247, 1),
+      0 0 18px rgba(134, 215, 247, 0.8),
+      0 0 24px rgba(134, 215, 247, 0.6);
+  }
+}
+
+/* Simple Card3 CSS */
+.card3-scroll-container {
+  position: relative;
+}
+
+.card3-sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card3-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: transparent;
+}
+
+.card3-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Content container */
+.card3-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Icon container */
+.card3-icon-container {
+  margin-bottom: 40px;
+}
+
+.card3-icon {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* Title styles - NO BACKGROUND */
+.cardtxt {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #ffffff; /* Simple white text */
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-family: "boowie", sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+/* Paragraph styles - BACK TO ORIGINAL */
+.card3-paragraph {
+  min-width: 500px;
+  max-width: 600px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #e2e8f0; /* Light gray text */
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Urbanist", sans-serif;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .card3-slideshow-wrapper .progress-line-container {
+    right: 20px;
+    top: 25%;
+    height: 50%;
+  }
+  
+  .card3-inner {
+    max-width: 90%;
+    padding: 32px 20px;
+    box-sizing: border-box; /* Apply only in media query */
+  }
+  
+  .card3-icon {
+    height: 64px;
+  }
+  
+  .cardtxt {
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+  }
+  
+  .card3-paragraph {
+    min-width: auto; /* Remove min-width only in media query */
+    max-width: 87%;
+    font-size: 1rem;
+    box-sizing: border-box; /* Apply only in media query */
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  .card3-slideshow-wrapper .progress-line-container {
+    right: 15px;
+    top: 30%;
+    height: 40%;
+    width: 1.5px;
+  }
+  
+  .card3-inner {
+    padding: 24px 10px; /* Tighter padding for mobile */
+    max-width: 100%; /* Use full width on mobile */
+    box-sizing: border-box; /* Apply only in media query */
+  }
+  
+  .card3-icon-container {
+    margin-bottom: 30px;
+  }
+  
+  .card3-icon {
+    height: 56px;
+  }
+  
+  .cardtxt {
+    font-size: 1.8rem; /* Smaller font for mobile */
+    margin-bottom: 30px;
+    padding: 0 5px; /* Add padding only on mobile */
+    box-sizing: border-box; /* Apply only in media query */
+  }
+  
+  .card3-paragraph {
+    min-width: auto; /* Remove min-width on mobile */
+    width: 90%; /* Full width on mobile */
+    max-width: 100%; /* No max constraint on mobile */
+    font-size: 0.9rem; /* Smaller text for mobile */
+    padding: 0 5px; /* Tight padding only on mobile */
+    box-sizing: border-box; /* Apply only in media query */
+  }
+}
+
+/* Small phones */
+@media (min-width: 400px) and (max-width: 499px) {
+  .card3-slideshow-wrapper .progress-line-container {
+    right: 12px;
+    top: 32%;
+    height: 35%;
+    width: 1.2px;
+  }
+  
+  .card3-inner {
+    padding: 20px 16px;
+    max-width: 92%;
+  }
+  
+  .card3-icon-container {
+    margin-bottom: 24px;
+  }
+  
+  .card3-icon {
+    height: 48px;
+  }
+  
+  .cardtxt {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+    letter-spacing: 0.8px;
+  }
+  
+  .card3-paragraph {
+    max-width: 95%;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+}
+
+/* Medium phones */
+@media (min-width: 500px) and (max-width: 599px) {
+  .card3-slideshow-wrapper .progress-line-container {
+    right: 15px;
+    top: 30%;
+    height: 40%;
+    width: 1.5px;
+  }
+  
+  .card3-inner {
+    padding: 24px 20px;
+    max-width: 90%;
+  }
+  
+  .card3-icon-container {
+    margin-bottom: 28px;
+  }
+  
+  .card3-icon {
+    height: 56px;
+  }
+  
+  .cardtxt {
+    font-size: 2rem;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+  }
+  
+  .card3-paragraph {
+    max-width: 90%;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* Large phones / small tablets */
+@media (min-width: 600px) and (max-width: 767px) {
+  .card3-slideshow-wrapper .progress-line-container {
+    right: 18px;
+    top: 28%;
+    height: 45%;
+    width: 1.8px;
+  }
+  
+  .card3-inner {
+    padding: 28px 24px;
+    max-width: 88%;
+  }
+  
+  .card3-icon-container {
+    margin-bottom: 32px;
+  }
+  
+  .card3-icon {
+    height: 64px;
+  }
+  
+  .cardtxt {
+    font-size: 2.25rem;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+  }
+  
+  .card3-paragraph {
+    max-width: 85%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card3-slideshow-wrapper .progress-line-container {
+    right: 25px;
+    top: 25%;
+    height: 50%;
+    width: 2px;
+  }
+  
+  .card3-inner {
+    max-width: 85%;
+    padding: 32px 28px;
+  }
+  
+  .card3-icon-container {
+    margin-bottom: 36px;
+  }
+  
+  .card3-icon {
+    height: 72px;
+  }
+  
+  .cardtxt {
+    font-size: 2.75rem;
+    margin-bottom: 36px;
+    letter-spacing: 1px;
+  }
+  
+  .card3-paragraph {
+    min-width: 480px;
+    max-width: 550px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
