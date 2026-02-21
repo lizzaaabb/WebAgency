@@ -1,13 +1,24 @@
 import React from 'react';
 import '../styles/About.css';
 import Footer from './Footer';
+import Contact from './ContactUs';
+import ContactForm from './ContactForm';
 
 function About() {
   const handleHomeClick = () => {
-    // Use the global navigation function you set up
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     if (window.navigateTo) {
       window.navigateTo('home');
     }
+    
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500);
+    
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 800);
   };
 
   const expertiseItems = [
@@ -132,63 +143,8 @@ function About() {
             </div>
           </div>
         </section>
-
-        <section className="about-section cta-section">
-          <div className="cta-content">
-            <h3 className="cta-heading">Ready to elevate your digital identity?</h3>
-            <p className="cta-subheading">Let's craft your next-level digital presence together.</p>
-            <div className="contact-container">
-              <form className="contact-form">
-                <div className="form-row">
-                  <div className="input-container">
-                    <input 
-                      placeholder="First Name" 
-                      required 
-                      type="text" 
-                      name="firstName" 
-                    />
-                  </div>
-                  <div className="input-container">
-                    <input 
-                      placeholder="Last Name" 
-                      required 
-                      type="text" 
-                      name="lastName" 
-                    />
-                  </div>
-                  <div className="input-container">
-                    <input 
-                      placeholder="Phone Number" 
-                      required 
-                      type="tel" 
-                      name="phone" 
-                    />
-                  </div>
-                  <div className="input-container">
-                    <input 
-                      placeholder="Email" 
-                      required 
-                      type="email" 
-                      name="email" 
-                    />
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="input-container textarea-container">
-                    <textarea 
-                      name="websiteDescription" 
-                      placeholder="Describe your kind of website..." 
-                      rows="5" 
-                      required
-                    />
-                  </div>
-                </div>
-                <button type="submit" className="submit-btn">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
+        <section>
+          <ContactForm/>
         </section>
       </div>
 

@@ -1,12 +1,21 @@
 @import url('https://fonts.cdnfonts.com/css/boowie');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+body {
+  background-color: rgb(39, 39, 39);
+}
+
 /* Base Styles */
 .about-body {
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
   overflow-x: hidden;
   position: relative;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Home Button */
@@ -45,9 +54,11 @@
 
 /* Main Container */
 .about-page-container {
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 60px;
+  box-sizing: border-box;
 }
 
 /* Header Section */
@@ -101,6 +112,7 @@
 .about-section {
   margin-bottom: 120px;
   position: relative;
+  width: 100%;
 }
 
 .section-title {
@@ -149,7 +161,8 @@
 
 .intro-text-container {
   flex: 1;
-  min-width: 400px;
+  min-width: 280px;
+  max-width: 100%;
 }
 
 .intro-description {
@@ -219,6 +232,7 @@
 .philosophy-content {
   text-align: left;
   max-width: 1000px;
+  width: 100%;
 }
 
 .philosophy-container {
@@ -276,6 +290,7 @@
   gap: 60px;
   margin-top: 100px;
   max-width: 900px;
+  width: 100%;
 }
 
 .expertise-card {
@@ -449,117 +464,6 @@
   }
 }
 
-/* Call to Action Section */
-.cta-section {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.cta-content {
-  width: 95%;
-  margin: 0 auto;
-}
-
-.cta-heading {
-  font-family: 'Boowie', sans-serif;
-  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  color: #ffffff;
-  margin: 0 0 30px;
-  line-height: 1.3;
-}
-
-.cta-subheading {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
-  font-weight: 300;
-  color: #ffffff;
-  margin: 0 0 80px;
-  line-height: 1.6;
-  opacity: 0.8;
-  font-style: italic;
-}
-
-.cta-button {
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  color: #ffffff;
-  background: linear-gradient(135deg, rgba(134, 215, 247, 0.9) 0%, rgba(182, 227, 255, 0.8) 50%, rgba(145, 219, 248, 0.9) 100%);
-  border: none;
-  padding: 24px 60px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  gap: 20px;
-  backdrop-filter: blur(30px);
-  box-shadow: 
-    0 15px 40px rgba(134, 215, 247, 0.25),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-}
-
-.cta-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-  transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cta-button:hover::before {
-  left: 100%;
-}
-
-.cta-button:hover {
-  transform: translateY(-6px);
-  box-shadow: 
-    0 25px 60px rgba(134, 215, 247, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.2);
-  background: linear-gradient(135deg, rgba(134, 215, 247, 1) 0%, rgba(182, 227, 255, 0.95) 50%, rgba(145, 219, 248, 1) 100%);
-}
-
-.cta-text {
-  position: relative;
-  z-index: 2;
-}
-
-.cta-arrow {
-  position: relative;
-  z-index: 2;
-  width: 20px;
-  height: 1px;
-  background: #ffffff;
-  transition: all 0.3s ease;
-}
-
-.cta-arrow::after {
-  content: '';
-  position: absolute;
-  right: -8px;
-  top: -3px;
-  width: 8px;
-  height: 8px;
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
-  transform: rotate(45deg);
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover .cta-arrow {
-  transform: translateX(5px);
-}
-
-
-
 /* =============================================
    MOBILE LANDSCAPE & SMALL TABLET (481px - 767px)
    ============================================= */
@@ -617,9 +521,6 @@
 
   .approach-text {
     order: 1;
-  }
-
-  .approach-text {
     gap: 35px;
   }
 
@@ -670,12 +571,6 @@
 
   .section-title {
     letter-spacing: 0.3em;
-  }
-
-  .cta-button {
-    padding: 20px 50px;
-    font-size: 1rem;
-    gap: 15px;
   }
 }
 
@@ -822,41 +717,6 @@
   .about-section {
     margin-bottom: 60px;
   }
-
-  .cta-section {
-    margin-bottom: 40px;
-  }
-
-  .cta-content {
-    width: 100%;
-  }
-
-  .cta-heading {
-    font-size: clamp(1.8rem, 6vw, 2.2rem);
-    margin: 0 0 25px;
-  }
-
-  .cta-subheading {
-    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
-    margin: 0 0 60px;
-  }
-
-  .cta-button {
-    padding: 18px 40px;
-    font-size: 0.95rem;
-    gap: 12px;
-    border-radius: 40px;
-  }
-
-  .cta-arrow {
-    width: 16px;
-  }
-
-  .cta-arrow::after {
-    right: -6px;
-    width: 6px;
-    height: 6px;
-  }
 }
 
 /* =============================================
@@ -886,12 +746,6 @@
 
   .visual-element {
     display: none;
-  }
-
-  .cta-button {
-    padding: 16px 35px;
-    font-size: 0.9rem;
-    gap: 10px;
   }
 
   .expertise-card::before {
@@ -936,21 +790,5 @@
   .scroll-indicator:hover {
     opacity: 0.7;
     transform: none;
-  }
-
-  .cta-button:hover {
-    transform: none;
-    box-shadow: 
-      0 15px 40px rgba(134, 215, 247, 0.25),
-      0 0 0 1px rgba(255, 255, 255, 0.1);
-    background: linear-gradient(135deg, rgba(134, 215, 247, 0.9) 0%, rgba(182, 227, 255, 0.8) 50%, rgba(145, 219, 248, 0.9) 100%);
-  }
-
-  .cta-button:hover .cta-arrow {
-    transform: none;
-  }
-
-  .cta-button:hover::before {
-    left: -100%;
   }
 }

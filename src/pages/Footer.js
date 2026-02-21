@@ -54,8 +54,8 @@ function Footer() {
               </div>
               <div className="contact-method">
                 <div className="contact-label">Inquiries</div>
-                <a href="mailto:apollocreations@gmail.com" className="contact-value">
-                  apollocreations@gmail.com
+                <a href="mailto:business@apollocreations.net" className="contact-value">
+                  Business@apollocreations.net
                 </a>
               </div>
             </div>

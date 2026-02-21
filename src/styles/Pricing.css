@@ -356,8 +356,9 @@
 }
 
 .cta-content {
-  width: 95%;
-  margin: 0 auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-heading {

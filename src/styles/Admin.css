@@ -1,0 +1,460 @@
+@import url('https://fonts.cdnfonts.com/css/boowie');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base Styles */
+.admin-container {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  min-height: 100vh;
+}
+
+/* Title */
+.admin-title {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 60px;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Stats Section */
+.stats-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.stats-title {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin: 0 0 30px;
+  opacity: 0.9;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(134, 215, 247, 0.08) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px 35px;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(134, 215, 247, 0.12) 100%);
+  border-color: rgba(134, 215, 247, 0.3);
+  transform: translateY(-3px);
+}
+
+.no-stats {
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+}
+
+/* Upload Form */
+.upload-form {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(134, 215, 247, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 50px;
+  margin-bottom: 80px;
+  backdrop-filter: blur(20px);
+}
+
+.form-title {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(134, 215, 247, 0.5);
+  box-shadow: 0 0 15px rgba(134, 215, 247, 0.2);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-file-input {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  padding: 15px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-file-input:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(134, 215, 247, 0.4);
+}
+
+/* Upload Button */
+.upload-button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(134, 215, 247, 0.9) 0%, rgba(182, 227, 255, 0.8) 50%, rgba(145, 219, 248, 0.9) 100%);
+  border: none;
+  padding: 18px 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: block;
+  margin: 40px auto 0;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 8px 25px rgba(134, 215, 247, 0.25);
+}
+
+.upload-button:hover {
+  background: linear-gradient(135deg, rgba(134, 215, 247, 1) 0%, rgba(182, 227, 255, 0.95) 50%, rgba(145, 219, 248, 1) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(134, 215, 247, 0.4);
+}
+
+.upload-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.upload-button.disabled:hover {
+  transform: none;
+  box-shadow: 0 8px 25px rgba(134, 215, 247, 0.25);
+}
+
+/* Message */
+.message {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.message.success {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.message.error {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.message.warning {
+  color: #ffd93d;
+  background: rgba(255, 217, 61, 0.1);
+  border: 1px solid rgba(255, 217, 61, 0.3);
+}
+
+/* Items Section */
+.items-section {
+  margin-top: 80px;
+}
+
+.items-title {
+  font-family: 'Boowie', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.item-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(134, 215, 247, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(20px);
+}
+
+.item-card:hover {
+  border-color: rgba(134, 215, 247, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(134, 215, 247, 0.15);
+}
+
+.item-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.item-content {
+  padding: 25px;
+}
+
+.item-title {
+  font-family: 'Boowie', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  margin: 0 0 15px;
+}
+
+.item-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 15px 0;
+}
+
+.item-image-count {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 10px 0;
+}
+
+/* Delete Button */
+.delete-button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.8) 0%, rgba(255, 77, 77, 0.9) 100%);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  width: 100%;
+}
+
+.delete-button:hover {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 1) 0%, rgba(255, 77, 77, 1) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+}
+
+.no-items {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .admin-container {
+    padding: 40px 20px;
+  }
+
+  .upload-form {
+    padding: 30px 20px;
+  }
+
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .form-title {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .admin-container {
+    padding: 30px 15px;
+  }
+
+  .upload-form {
+    padding: 25px 15px;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select,
+  .form-file-input {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  .upload-button {
+    padding: 15px 40px;
+    font-size: 1rem;
+  }
+
+  .stat-card {
+    padding: 15px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Edit Button Styling */
+.edit-button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
+  min-width: 100px;
+}
+
+.edit-button:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.edit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+/* Cancel Button Styling */
+.cancel-button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(108, 117, 125, 0.2);
+}
+
+.cancel-button:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #3d4246 100%);
+  box-shadow: 0 6px 12px rgba(108, 117, 125, 0.3);
+  transform: translateY(-2px);
+}
+
+.cancel-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+}
+
+.cancel-button:disabled,
+.edit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Update existing delete button to work in flex layout */
+.delete-button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #f56565 0%, #c53030 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(245, 101, 101, 0.2);
+  min-width: 100px;
+}
+
+.delete-button:hover {
+  background: linear-gradient(135deg, #e53e3e 0%, #9b2c2c 100%);
+  box-shadow: 0 6px 12px rgba(245, 101, 101, 0.3);
+  transform: translateY(-2px);
+}
+
+.delete-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(245, 101, 101, 0.2);
+}

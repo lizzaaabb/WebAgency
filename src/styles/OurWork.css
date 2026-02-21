@@ -29,7 +29,8 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Default to 1 column */
+  grid-template-columns: 1fr; 
   gap: clamp(20px, 3vw, 30px);
   width: 100%;
 }
@@ -138,7 +139,7 @@
 /* 3 columns on medium-large screens */
 @media (min-width: 1000px) and (max-width: 1399px) {
   .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -210,5 +211,168 @@
   
   .project-image {
     height: 120px;
+  }
+}
+
+
+
+
+
+/* View More Projects Button Styles */
+.view-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(30px, 5vw, 50px);
+  width: 100%;
+}
+
+.view-more-button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(134, 215, 247, 0.9), rgba(145, 219, 248, 0.9));
+  border: none;
+  padding: clamp(10px, 1.5vw, 14px) clamp(24px, 3vw, 32px);
+  border-radius: clamp(20px, 3vw, 24px);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.view-more-button:hover {
+  background: linear-gradient(135deg, rgba(134, 215, 247, 1), rgba(145, 219, 248, 1));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(134, 215, 247, 0.3);
+}
+
+/* Mobile styles for view more button */
+@media (max-width: 599px) {
+  .view-more-container {
+    margin-top: clamp(25px, 4vw, 35px);
+  }
+  
+  .view-more-button {
+    padding: clamp(8px, 1.5vw, 12px) clamp(20px, 4vw, 28px);
+  }
+}
+
+/* Improved Skeleton Loading Styles */
+.skeleton-card {
+  pointer-events: none;
+  opacity: 0.6;
+  min-height: 350px; /* Ensure proper card height */
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton-image {
+  height: clamp(140px, 20vw, 180px); /* Match actual image height */
+  width: 100%;
+  flex-shrink: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.8s ease-in-out infinite;
+}
+
+.skeleton-card .project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(16px, 3vw, 24px);
+}
+
+.skeleton-title {
+  height: clamp(22px, 2.5vw, 28px);
+  width: 70%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.8s ease-in-out infinite;
+  animation-delay: 0.1s;
+  border-radius: 6px;
+  flex: 1;
+  margin-bottom: clamp(12px, 2vw, 16px);
+}
+
+.skeleton-text {
+  height: clamp(14px, 1.5vw, 16px);
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.8s ease-in-out infinite;
+  animation-delay: 0.2s;
+  border-radius: 4px;
+  margin-bottom: clamp(10px, 1.5vw, 12px);
+}
+
+.skeleton-text-short {
+  width: 75%;
+  margin-bottom: clamp(16px, 2vw, 20px);
+  animation-delay: 0.3s;
+}
+
+.skeleton-button {
+  height: clamp(26px, 3vw, 30px);
+  width: clamp(55px, 8vw, 75px);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.8s ease-in-out infinite;
+  animation-delay: 0.4s;
+  border-radius: clamp(16px, 2.5vw, 20px);
+  flex-shrink: 0;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Mobile skeleton adjustments */
+@media (max-width: 599px) {
+  .skeleton-card {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .skeleton-button.desktop-button {
+    display: none;
+  }
+  
+  .skeleton-button.mobile-button {
+    display: block;
+    margin-top: clamp(12px, 2vw, 16px);
+    align-self: flex-start;
+  }
+  
+  .skeleton-title {
+    width: 80%;
   }
 }

@@ -1,0 +1,22 @@
+.w-logo {
+  position: fixed; /* Changed from absolute to fixed */
+    bottom: 80px;
+    left: 20px;
+    height: 38px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none; /* Hidden by default */
+    filter: drop-shadow(0 6px 16px rgba(37, 176, 211, 0.578));
+    opacity: 0.8;
+}
+
+/* Show only on mobile/tablet screens */
+@media screen and (max-width: 768px) {
+  .w-logo {
+    display: block;
+  }
+}
+
+

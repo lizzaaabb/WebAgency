@@ -10,6 +10,7 @@ import ContactHeader from './ContactHeader';
 import ContactForm from './ContactForm';
 import Footer from './Footer';
 import Menu from './Menu';
+import Whatsapp from './Whatsapp';
 
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
       <ContactHeader />
       <ContactForm />
       <Footer />
+
     </>
   );
 }

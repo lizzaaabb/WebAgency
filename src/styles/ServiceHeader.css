@@ -33,6 +33,7 @@ opacity: 0.8;
 .service-header1 {
     margin-left: 60px;
     padding: 25px;
+    text-align: center;
 }
 .service-header1 h2{
     font-size: 3rem;

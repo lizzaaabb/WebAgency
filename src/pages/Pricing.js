@@ -5,10 +5,23 @@ import ContactForm from './ContactForm';
 
 function Pricing() {
   const handleHomeClick = () => {
+    // Method 1: Try immediate scroll to top, then navigate
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     // Use the global navigation function you set up
     if (window.navigateTo) {
       window.navigateTo('home');
     }
+    
+    // Method 2: Also try scrolling after navigation with longer delay
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500);
+    
+    // Method 3: Try without smooth behavior as backup
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 800);
   };
 
   return (
