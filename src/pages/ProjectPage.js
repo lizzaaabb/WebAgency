@@ -303,10 +303,10 @@ function ProjectPage() {
 
           {/* CTA Section */}
           <div className="project-cta-section">
-            <div className="cta-content">
+            <div className="cta-content2">
               <h2 className="cta-title">Ready to See It Live?</h2>
               <p className="cta-subtitle">Experience the full project in action</p>
-              <button onClick={handleVisitWebsite} className="cta-button">
+              <button onClick={handleVisitWebsite} className="cta-button2">
                 Visit Website
               </button>
             </div>
