@@ -55,7 +55,6 @@ function Home() {
       <ContactHeader />
       <ContactForm />
       <Footer />
-      <Whatsapp />
     </>
   );
 }
