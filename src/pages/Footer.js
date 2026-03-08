@@ -83,6 +83,14 @@ function Footer() {
               <a href="#">Privacy</a>
               <a href="#">Terms</a>
               <a href="#">Cookies</a>
+              <span className="legal-divider">|</span>
+              <a
+                href="https://saitisackoba.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🇬🇪 For Georgians
+              </a>
             </div>
           </div>
         </div>

@@ -442,3 +442,28 @@
     gap: 20px;
   }
 }
+
+
+.footer-geo-link {
+  display: block;
+  margin-top: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  opacity: 0.5;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.footer-geo-link:hover {
+  opacity: 0.9;
+}
+
+.legal-divider {
+  color: white;
+  opacity: 0.3;
+}
